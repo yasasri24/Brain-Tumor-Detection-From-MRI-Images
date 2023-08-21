@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Tumor Detection Result</title>
+    <style>
+        b{
+            color:#0275d8;
+
+        }
+       
+        div{
+           margin : auto;
+           width:60%;
+           height:auto;
+           background-color: rgb(221, 247, 241);
+           padding:.4em.9em;
+           border-radius: 1px solid black;
+           box-shadow:   .1em.1em grey,
+           -.1em -0.1em grey,.1em -0.1em grey,-
+
+        }
+        body{
+            background-color: black;
+            
+height: 100%;
+        }
+        h1{
+            color:aliceblue;
+        }
+        .green-bg {
+            
+            color: #1a6f1a;
+            font-size: 3rem!important ;
+            /* Green color for "No tumor detected" */
+        }
+        .red-bg {
+            font-size: 3rem!important ;
+            color: #FF0000;
+             /* Red color for "Tumor detected" */
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Brain Tumor Detection Result</h1>
+    <div>
+    
+    <h3>Patient Name:&nbsp;&nbsp; <b>{{ name }}</b></h3>
+    <h3>Patient Age: &nbsp;&nbsp;<b>{{age}}</b></h3>
+    <br>
+    <h2>Result: <i class="result-container {% if result == 'No tumor detected' %}green-bg{% else %}red-bg{% endif %}">{{ result }}</b></h2>
+    <br>
+</div>
+    
+</body>
+</html>

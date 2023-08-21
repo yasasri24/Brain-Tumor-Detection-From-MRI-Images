@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Tumor Detection</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+           
+        }
+        #top {
+            padding-top: 20px;
+            height: 25%;
+        }
+        #bottom {
+            height: 75%;
+        }
+        p{
+            font-size: 15px;
+            
+        }
+        #left {
+            background-color: black;
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+        #right {
+            background-color:black;
+            float: left;
+            width: 50%;
+            height: 100%;
+            
+        }
+        input {
+  width: 100%;
+   padding: 10px 20px;
+  margin: 4px 0; 
+  /* box-sizing: border-box; */
+}
+        .h{
+            margin:auto;
+           width:60%;
+           height:auto;
+           
+           padding:.4em.9em;
+            background-color: rgb(221, 247, 241);
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <!-- Content for the top part of the page goes here -->
+        <h1 class="h" align="center" color="white">Brain Tumor Detection using Deep Learning from MRI images</h1>
+    </div>
+    <div id="bottom">
+        <div id="left">
+            <!-- Content for the left part of the bottom goes here -->
+            
+            <p style="background-color:black;color:aliceblue;text-align: justify;" >&ensp;&ensp;&ensp;Brain tumor identification is a really challenging task in the early stages of life. These days the issue of brain tumor automatic identification is of great interest.<br> &ensp; &ensp;&ensp;Deep learning techniques can be used in order to detect the brain tumor of a patient using the MRI images of a patient’s brain. In this application, we are helping the doctors and patients to classify the type of scan for the specific image given with the help of Neural Networks and store the patient's data.</p>
+            <img src="../static/images/14 no.jpg" height="270" width="480" align="top">
+        </div>
+        <div id="right">
+            <!-- Content for the right part of the bottom goes here -->
+            <div class="h">
+            <h2 class="h">Upload MRI image to Predict Result</h2>
+            <form method="post" action="/predict" class="h" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="name" placeholder="Enter patient name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="age" placeholder="Enter patient age">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload MRI image:<input type="file" name="file"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Predict"></td>
+                    </tr>
+                </table>
+                
+                
+            </form>
+           <br>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
